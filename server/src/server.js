@@ -13,6 +13,10 @@ app.get("/", (req, res) => {
   res.send("Campify API running 🚀");
 });
 
+app.get("/health", (req, res) => {
+  res.json({ status: "OK" });
+});
+
 const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => {
